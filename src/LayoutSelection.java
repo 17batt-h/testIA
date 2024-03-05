@@ -42,13 +42,9 @@ public class LayoutSelection {
             // Dynamically instantiate the selected layout class
             Class<?> layoutClass = Class.forName(selectedLayout);
             Object layoutInstance = layoutClass.getDeclaredConstructor().newInstance();
-
-            // You can add more code to do something with the layout instance if needed
-
-            frame.dispose(); // Close the layout selector window
+            frame.dispose();
         } catch (Exception e) {
             e.printStackTrace();
-            // Handle any exceptions that may occur during instantiation
         }
     }
 
